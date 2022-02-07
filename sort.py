@@ -18,7 +18,7 @@ def getmaps(map_list):
             mapString = cell.upper()
             for x in map_info:
                 if x in mapString:
-                    series_list.update({map: map_info[map]})
+                    series_list.update({x: map_info[x]})
     return series_list
 
 
