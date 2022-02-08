@@ -8,9 +8,10 @@ import funclib as fl
 file_path = filedialog.askopenfilename()
 file_parts = file_path.split('/')
 fileToParse = file_parts[len(file_parts) - 1]
-
-season = 2
-tier = 'NaN'
+print('Enter the season being processed')
+season = input()
+print('Enter the tier for the season being processed, NaN for none(Season 1-2)')
+tier = input()
 matchID = 10000 * season
 csv_columns = ['match_id', 'season', 'week', 'map_name', 'map type', 'player_name', 'team_name', 'team_score',
                'player_tier']
@@ -30,53 +31,54 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 
 sortedData = []
 completeSet = []
-for sheet in readinFile:
-    mapNames = []
-    mapTypes = []
-    awayName = []
-    homeName = []
-    validMatch = False
-    gatheredMaps = False
-    gotAway = False
-    columnNum = 0
-    awayTeam = 3
-    gotHome = False
-    inputFrame = pd.read_excel(xl, sheet)
-    for column in inputFrame:
-        columnNum = columnNum + 1
-        if not gatheredMaps:
-            mapList = gd.getmaps(inputFrame[column])
-            mapNames = list(mapList.keys())
-            mapTypes = list(mapList.values())
-            gatheredMaps = True
-        if columnNum % 3 == 0:
-            teams = fl.splitstring(column, ' @ ')
-            homeName = teams[0]
-            awayName = teams[1]
-        # home loop
-        # gather players for the map, the team score
-        if gotHome:
-            playerInfo, mapScores = gd.getmatchinfo(inputFrame[column])
-            sortedData = gd.sortmatchinfo(matchID, season, sheet, mapNames, mapTypes, playerInfo, awayName, mapScores,
-                                          tier)
-            completeSet.append(sortedData)
-            matchID = matchID + 1
-            gotHome = False
-        if columnNum % 3 == 0:
-            playerInfo, mapScores = gd.getmatchinfo(inputFrame[column])
-            sortedData = gd.sortmatchinfo(matchID, season, sheet, mapNames, mapTypes, playerInfo, homeName, mapScores,
-                                          tier)
-            completeSet.append(sortedData)
-            gotHome = True
+if season == 2:
+    for sheet in readinFile:
+        mapNames = []
+        mapTypes = []
+        awayName = []
+        homeName = []
+        validMatch = False
+        gatheredMaps = False
+        gotAway = False
+        columnNum = 0
+        awayTeam = 3
+        gotHome = False
+        inputFrame = pd.read_excel(xl, sheet)
+        for column in inputFrame:
+            columnNum = columnNum + 1
+            if not gatheredMaps:
+                mapList = gd.getmaps(inputFrame[column])
+                mapNames = list(mapList.keys())
+                mapTypes = list(mapList.values())
+                gatheredMaps = True
+            if columnNum % 3 == 0:
+                teams = fl.splitstring(column, ' @ ')
+                homeName = teams[0]
+                awayName = teams[1]
+            # home loop
+            # gather players for the map, the team score
+            if gotHome:
+                playerInfo, mapScores = gd.getmatchinfo(inputFrame[column])
+                sortedData = gd.sortmatchinfo(matchID, season, sheet, mapNames, mapTypes, playerInfo, awayName, mapScores,
+                                            tier)
+                completeSet.append(sortedData)
+                matchID = matchID + 1
+                gotHome = False
+            if columnNum % 3 == 0:
+                playerInfo, mapScores = gd.getmatchinfo(inputFrame[column])
+                sortedData = gd.sortmatchinfo(matchID, season, sheet, mapNames, mapTypes, playerInfo, homeName, mapScores,
+                                            tier)
+                completeSet.append(sortedData)
+                gotHome = True
 
-csv_file = "playerinfo.csv"
+    csv_file = "playerinfo.csv"
 
-try:
-    with open(csv_file, 'w', newline='') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-        writer.writeheader()
-        for data in completeSet:
-            for info in data:
-                writer.writerow(info)
-except IOError:
-    print("I/O error")
+    try:
+        with open(csv_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+            writer.writeheader()
+            for data in completeSet:
+                for info in data:
+                    writer.writerow(info)
+    except IOError:
+        print("I/O error")
