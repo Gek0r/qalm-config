@@ -67,3 +67,28 @@ def sortmatchinfo(matchid, season, week, maps, gamemodes, players, team, scores,
             sorted_data.append(temp_dict)
         x = x + 1
     return sorted_data
+
+
+
+#first 13 cells ignored
+#then get next 6 cells
+#check if they have strings
+#after that next cell will be score if players decteced
+#if empty, ignore addition and mark the number that was not grabbed(map 3, map4, ect)
+#Iterate until bottom, 5 regular season, semi finals and onward 7
+#if the users are not listed for home or away, check to see if any maps were not passed
+#If a may throws a non fill, pop/ignore that map and game for BOTH teams(prevent lopsided data)
+#finally append data to CSV file
+#loop 13
+#   then for next 6
+#       push cell into arrary
+#   if array empty or has missing cells\
+#       Mark map as incomplete
+#   else
+#       get score
+#       Append array to final push
+#       return data, caught exceptions
+#
+#for seasons beyond 2, map is below score
+#DO NOT grab maps, part of gather data loop
+#
