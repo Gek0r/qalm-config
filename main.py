@@ -9,7 +9,7 @@ file_path = filedialog.askopenfilename()
 file_parts = file_path.split('/')
 fileToParse = file_parts[len(file_parts) - 1]
 print('Enter the season being processed')
-season = input()
+season = int(input())
 print('Enter the tier for the season being processed, NaN for none(Season 1-2)')
 tier = input()
 matchID = 10000 * season
@@ -31,6 +31,7 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 
 sortedData = []
 completeSet = []
+
 if season == 2:
     for sheet in readinFile:
         mapNames = []
@@ -80,5 +81,6 @@ if season == 2:
             for data in completeSet:
                 for info in data:
                     writer.writerow(info)
+            print('Job completed')
     except IOError:
         print("I/O error")
