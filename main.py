@@ -16,6 +16,7 @@ readinFile = xl.sheet_names
 for name in readinFile:
     sheet = pd.read_excel(fileToParse, sheet_name = name)
     prunedJson = jsc.cleanrawjson(sheet)
+    
     release = prunedJson.to_json(indent=4)
     
     with open(name + ".json", 'w') as outfile:
