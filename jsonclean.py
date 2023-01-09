@@ -20,7 +20,7 @@ def cleanrawjson(sheet : pd.DataFrame):
     i = 1
     for data in sheet:
         if i % 3 == 0:
-            sheet.pop(row)
+            sheet.pop(data)
         i = i + 1
         
     return(sheet)
