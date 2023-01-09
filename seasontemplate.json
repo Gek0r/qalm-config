@@ -1,0 +1,247 @@
+    {
+        "season": 8,
+        "tier": "discord",
+        "matches": [
+            {
+                "week": "Feb 23, 2022",
+                "home": "Renegades",
+                "away": "Storybook Heroes",
+                "final_home_score": 4,
+                "final_away_score": 0,
+                "final_winner": "Renegades",
+                "home_roster": [
+                    "Infuse",
+                    "Rabbitgunner",
+                    "MiniWheats",
+                    "Sparky",
+                    "DannyBanany",
+                    "CryxtheAce",
+                    "Slay3r",
+                    "HunterKiller"
+                ],
+                "away_roster": [
+                    "genjimain",
+                    "davion",
+                    "water",
+                    "lust",
+                    "queue",
+                    "zuinxx",
+                    "skysniper"
+                ],
+                "maps": [
+                    {
+                        "name": "Busan",
+                        "type": "Control",
+                        "home_players": [
+                            "Infuse",
+                            "Rabbitgunner",
+                            "MiniWheats",
+                            "Sparky",
+                            "Slay3r",
+                            "HunterKiller"
+                        ],
+                        "away_players": [
+                            "genjimain",
+                            "davion",
+                            "water",
+                            "lust",
+                            "queue",
+                            "zuinxx"
+                        ],
+                        "home_score": 2,
+                        "away_score": 0,
+                        "map_winner": "Renegades"
+                    },
+                    {
+                        "name": "Hanamura",
+                        "type": "Assault",
+                        "home_players": [
+                            "Infuse",
+                            "Rabbitgunner",
+                            "MiniWheats",
+                            "Sparky",
+                            "Slay3r",
+                            "HunterKiller"
+                        ],
+                        "away_players": [
+                            "genjimain",
+                            "davion",
+                            "water",
+                            "lust",
+                            "queue",
+                            "zuinxx"
+                        ],
+                        "home_score": 2,
+                        "away_score": 0,
+                        "map_winner": "Renegades"
+                    },
+                    {
+                        "name": "King's Row",
+                        "type": "Hybrid",
+                        "home_players": [
+                            "Infuse",
+                            "Rabbitgunner",
+                            "MiniWheats",
+                            "DannyBanany",
+                            "Slay3r",
+                            "CryxtheAce"
+                        ],
+                        "away_players": [
+                            "genjimain",
+                            "davion",
+                            "water",
+                            "lust",
+                            "queue",
+                            "zuinxx"
+                        ],
+                        "home_score": 5,
+                        "away_score": 4,
+                        "map_winner": "Renegades"
+                    },
+                    {
+                        "name": "Escort",
+                        "type": "Junkertown",
+                        "home_players": [
+                            "Infuse",
+                            "Rabbitgunner",
+                            "MiniWheats",
+                            "DannyBanany",
+                            "CryxtheAce",
+                            "HunterKiller"
+                        ],
+                        "away_players": [
+                            "genjimain",
+                            "davion",
+                            "water",
+                            "lust",
+                            "queue",
+                            "zuinxx"
+                        ],
+                        "home_score": 3,
+                        "away_score": 0,
+                        "map_winner": "Renegades"
+                    }
+                ]
+            },
+            {
+                "week": "Feb 23, 2022",
+                "home": "Domination",
+                "away": "Valkyrie",
+                "final_home_score": 1,
+                "final_away_score": 3,
+                "final_winner": "Valkyrie",
+                "home_roster": [
+                    "ClassyTurtle",
+                    "Sickomobamba",
+                    "Brent",
+                    "SleepyBear",
+                    "SpellingFale",
+                    "Foxard",
+                    "Mazoku",
+                    "Insticnt"
+                ],
+                "away_roster": [
+                    "Vexx",
+                    "Ba5ilisk",
+                    "JMX",
+                    "Xotiac",
+                    "WompDomp",
+                    "MixerKraken"
+                ],
+                "maps": [
+                    {
+                        "name": "Busan",
+                        "type": "Control",
+                        "home_players": [
+                            "Brent",
+                            "ClassyTurtle",
+                            "SpellingFale",
+                            "SleepyBear",
+                            "Foxard",
+                            "Mazoku"
+                        ],
+                        "away_players": [
+                            "Vexx",
+                            "Ba5ilisk",
+                            "JMX",
+                            "Xotaic",
+                            "WompDomp",
+                            "MixerKraken"
+                        ],
+                        "home_score": 0,
+                        "away_score": 2,
+                        "map_winner": "Valkyrie"
+                    },
+                    {
+                        "name": "Assault",
+                        "type": "Volskaya Industries",
+                        "home_players": [
+                            "Brent",
+                            "ClassyTurtle",
+                            "SpellingFale",
+                            "SleepyBear",
+                            "Foxard",
+                            "Mazoku"
+                        ],
+                        "away_players": [
+                            "Vexx",
+                            "Ba5ilisk",
+                            "JMX",
+                            "Xotaic",
+                            "WompDomp",
+                            "MixerKraken"
+                        ],
+                        "home_score": 0,
+                        "away_score": 1,
+                        "map_winner": "Valkyrie"
+                    },
+                    {
+                        "name": "King's Row",
+                        "type": "Hybrid",
+                        "home_players": [
+                            "Sickomobamba",
+                            "ClassyTurtle",
+                            "SpellingFale",
+                            "SleepyBear",
+                            "Foxard",
+                            "Brent"
+                        ],
+                        "away_players": [
+                            "Vexx",
+                            "Ba5ilisk",
+                            "JMX",
+                            "Xotaic",
+                            "WompDomp",
+                            "MixerKraken"
+                        ],
+                        "home_score": 6,
+                        "away_score": 4,
+                        "map_winner": "Domination"
+                    },
+                    {
+                        "name": "JunkerTown",
+                        "type": "Escort",
+                        "home_players": [
+                            "Sickomobamba",
+                            "ClassyTurtle",
+                            "SpellingFale",
+                            "SleepyBear",
+                            "Foxard",
+                            "Brent"
+                        ],
+                        "away_players": [
+                            "Vexx",
+                            "Ba5ilisk",
+                            "JMX",
+                            "Xotaic",
+                            "WompDomp",
+                            "MixerKraken"
+                        ],
+                        "home_score": 1,
+                        "away_score": 3,
+                        "map_winner": "Valkyrie"
+                    }
+                ]
+            }
+        ]
+    }
